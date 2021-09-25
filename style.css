@@ -15,7 +15,7 @@ header {
     color: #F6F1D1;
 }
 
-.botao-novo-livro {
+.botao {
     font-family: "Space Mono", monospace;
     padding: 12px 16px;
     margin: 12px;
@@ -26,18 +26,18 @@ header {
     border: 1px solid rgba(246, 241, 209, 0.5);
 }
 
-.botao-novo-livro:hover {
+.botao:hover {
     background: #0B2027;
     color :#F6F1D1;
     cursor: pointer;
 }
 
-.botao-novo-livro:active {
+.botao:active {
     background: black;
 }
 
-.form-novo-livro {
-    display: block;
+.form {
+    display: none;
     position: fixed;
     width: 480px;
     left: 50%;
@@ -48,7 +48,7 @@ header {
     text-align: center;
 }
 
-.form-novo-livro h2 {
+.form h2 {
     display: block;
     font-family: "Space Mono", monospace;
     font-size: 32px;
@@ -57,7 +57,7 @@ header {
     font-weight: bold;
 }
 
-.form-novo-livro label, .form-novo-livro legend{
+.form label, .form legend{
     display: block;
     font-size: 24px;
     color: #F6F1D1;
@@ -79,11 +79,12 @@ header {
     background: rgba(255, 255, 255, 0.1);
     color: #F6F1D1;
     padding: 16px;
-    margin: 12px;
+    margin: 12px 12px 16px;
     white-space: nowrap;
 }
 
-.livros {
+.livro {
+    font-family: "Space Mono", monospace;
     background: rgba(255, 255, 255, 0.1);
     color: #F6F1D1;
     padding: 16px;

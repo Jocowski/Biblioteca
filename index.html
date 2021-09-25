@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BioRhyme">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono">
 
     <title>Biblioteca</title>
 </head>
@@ -19,35 +19,34 @@
     </header>
 
     <main>
-        <button class="botao-novo-livro">Novo Livro</button>
+        <button class="botao" data-botao-form>Novo Livro</button>
 
-        <form class="form-novo-livro">
+        <form class="form" data-form>
             <h2>Novo Livro</h2>
 
             <label for="titulo">Título do Livro</label>
-            <input type="text" class="input-padrao" id="titulo">
+            <input type="text" class="input-padrao" id="titulo" data-titulo>
 
             <label for="autor">Autor do Livro</label>
-            <input type="text" class="input-padrao" id="autor">
+            <input type="text" class="input-padrao" id="autor" data-autor>
 
             <label for="paginas">Número de Páginas</label>
-            <input type="number" class="input-padrao" id="paginas">
+            <input type="number" class="input-padrao" id="paginas" data-paginas>
             
             <fieldset>
                 <legend>Status</legend>
-                <select class="input-padrao">
-                    <option selected>Já Li</option>
-                    <option>Estou Lendo</option>
-                    <option>Quero Ler</option>
+                <select class="input-padrao" data-status>
+                    <option value="ja-li" selected>Já Li</option>
+                    <option value="estou-lendo">Estou Lendo</option>
+                    <option value="quero-ler">Quero Ler</option>
                 </select>
             </fieldset>
 
-            <input type="submit" class="botao-novo-livro" value="Criar Novo Livro">
+            <input type="submit" class="botao" value="Criar Novo Livro" data-botao-novo-livro>
         </form>
 
-        <ul class="lista">
+        <ul class="lista" data-lista>
             <li class="header-lista">Título Autor Páginas Status</li>
-            <li class="livros">Isso é um teste</li>
         </ul>
     </main>
 
