@@ -7,7 +7,7 @@ Uma biblioteca para salvar livros.
 
 ### Funções Previstas
 - [X] O usuário poderá adicionar livros.
-- [ ] O usuário poderá remover livros.
+- [X] O usuário poderá remover livros.
 - [X] O usuário poderá adicionar informações sobre o livro (autor, titulo, número de páginas, status de leitura).
 
 ### Possíveis Funções Futuras

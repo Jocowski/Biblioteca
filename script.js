@@ -32,12 +32,17 @@ function criarNovoLivro(evento) {
     const valorPaginas = paginas.value;
     const valorStatus = status.options[status.selectedIndex].text;
 
-    const livro = document.createElement("li");
+    const livro = document.createElement("tr");
     livro.classList.add("livro");
 
-    const conteudo = `${valorTitulo} ${valorAutor} ${valorPaginas} ${valorStatus}`;
+    const botaoRemover = document.createElement("td");
+    botaoRemover.classList.add("livro");
+    botaoRemover.appendChild(BotaoRemover());
+
+    const conteudo = `<td class="livro">${valorTitulo}</td><td class="livro">${valorAutor}</td><td class="livro">${valorPaginas}</td><td class="livro">${valorStatus}</td>`;
 
     livro.innerHTML = conteudo;
+    livro.appendChild(botaoRemover);
 
     lista.appendChild(livro);
     titulo.value = "";
@@ -45,5 +50,25 @@ function criarNovoLivro(evento) {
     paginas.value = "";
 
     form.style.display = "none";
+
+}
+
+const BotaoRemover = () => {
+
+    const botaoRemover = document.createElement("button");
+    botaoRemover.innerText = "Remover";
+
+    botaoRemover.addEventListener("click", removerLivro);
+
+    return botaoRemover;
+
+}
+
+function removerLivro(evento) {
+
+    const botaoRemove = evento.target;
+    const livro = botaoRemove.parentElement.parentElement;
+
+    livro.remove();
 
 }
